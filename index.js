@@ -4,7 +4,7 @@ function redir(t) {
 			window.location.href = "./bruh/index.html";
 			break;
 		case "karesz":
-			window.location.href = "./karesz/index.md";
+			window.location.href = "./karesz/index.html";
 			break;
 
 		default:
