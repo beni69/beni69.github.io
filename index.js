@@ -1,7 +1,7 @@
 function redir(t) {
 	switch (t) {
 		case "bruh":
-			window.location.href = "./bruh/index.html";
+			window.location.href = "./bruh/";
 			break;
 		case "karesz":
 			window.location.href = "./karesz/index.html";
