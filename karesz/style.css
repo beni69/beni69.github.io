@@ -1,0 +1,37 @@
+body {
+	font-family: "Roboto", sans-serif;
+	color: white;
+	background-color: #121212;
+	font-size: 16px;
+	line-height: 1.6em;
+	margin: 0;
+}
+
+body h3 {
+	color: #1020f3;
+}
+
+.container {
+	overflow: hidden;
+}
+
+#main-header {
+	background-color: #1020f3;
+	color: white;
+	padding: 0;
+}
+#main-header h1 {
+	font-size: 50px;
+}
+#main-header img {
+	padding: 10px;
+	background-color: #121212;
+	width: 40px;
+	height: 40px;
+	margin-left: 8%;
+	margin-right: 1%;
+}
+
+.error {
+	color: #cf6679;
+}
