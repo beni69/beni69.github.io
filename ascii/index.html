@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- <script
+            type="text/javascript"
+            src="//cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"
+        ></script> -->
+        <!-- <script type="text/javascript" src="figlet.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/figlet@1.5.0/lib/figlet.min.js"></script>
+
+        <link rel="stylesheet" href="style.css" />
+        <script src="ascii.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@420&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Ascii from text</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="center">
+                <h1 id="title">Ascii from text</h1>
+                <textarea
+                    name="input"
+                    id="input"
+                    cols="30"
+                    rows="10"
+                    placeholder="Enter text to convert"
+                ></textarea>
+                <p></p>
+                <button id="submit" onclick="submit()">Go!</button>
+                <p></p>
+                <textarea
+                    name="output"
+                    id="output"
+                    cols="30"
+                    rows="10"
+                    placeholder="The result will appear here"
+                    readonly
+                ></textarea>
+            </div>
+        </div>
+    </body>
+</html>

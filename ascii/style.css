@@ -1,0 +1,37 @@
+body {
+    background-color: #fff;
+    color: limegreen;
+    font-family: "Roboto", "sans-serif";
+    font-size: 16px;
+    font-weight: normal;
+    /* just using font property can do the same */
+    line-height: 1.6em;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+.container h1 {
+    font-size: 420%;
+}
+
+#input {
+    margin: 0;
+    height: 169px;
+    width: 250px;
+}
+#output {
+    margin: 0;
+    height: 300px;
+    width: 690px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
