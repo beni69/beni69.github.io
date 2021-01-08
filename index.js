@@ -6,6 +6,9 @@ function redir(t) {
         case "karesz":
             window.location.href = "./karesz/";
             break;
+        case "ascii":
+            window.location.href = "./ascii/";
+            break;
 
         default:
             console.error("invalid redirect");
