@@ -15,14 +15,16 @@ body {
 .container h1 {
     font-size: 420%;
 }
+.container textarea {
+    background-color: #0d0d0d;
+    color: white;
+}
 
 #input {
-    margin: 0;
     height: 169px;
     width: 250px;
 }
 #output {
-    margin: 0;
     height: 300px;
     width: 690px;
 }
