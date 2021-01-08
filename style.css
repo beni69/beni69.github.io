@@ -1,0 +1,27 @@
+body {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    background-color: #121212;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+body h3 {
+    color: cornflowerblue;
+}
+
+#main-header {
+    background-color: royalblue;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.error {
+    color: #cf6679;
+}
