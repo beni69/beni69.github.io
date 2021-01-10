@@ -2,6 +2,7 @@ function submit() {
     const title = document.getElementById("title");
     const input = document.getElementById("input");
     const output = document.getElementById("output");
+    const font = document.getElementById("font");
 
     const text = input.value;
     if (text == "") return;
@@ -9,6 +10,7 @@ function submit() {
     figlet.text(
         text,
         {
+            font: font.value,
             horizontalLayout: "default",
             verticalLayout: "fitted",
             width: 140,
