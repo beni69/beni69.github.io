@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Karesz Clicker v1.0</title>
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <script src="index.js"></script>
-  <body onload="onPageLoad()">
-    <div id="sidebar">
-      <div class="item">
-      <div>Karesz Generator</div>
-      <button class="itemButton" onclick="buyKareszGenerator(1)">Buy 1</button>
-      <div id="kareszGeneratorPriceText">Price: 0 Karesz</div>
-    </div>
-    </div>
-    <div id="kareszContainer">
-      <h1 id="kareszCountText">Karesz count:</h1>
-      <h2 id="kareszPerSecText">0 Karesz/sec</h2>
-      <img src="../Karesz.png" id="kareszImage" onclick="kareszClicked()">
-      <br>
-      <button id="saveButton" onclick="saveGame()">Save</button>
-      <button id="loadButton" onclick="loadGame(true)">Load</button>
-      <button id="resetButton" onclick="resetGame()">Reset</button>
-    </div>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Karesz Clicker v1.0</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <script src="index.js"></script>
+    <body onload="onPageLoad()">
+        <div id="sidebar">
+            <div class="item">
+                <div>Karesz Generator</div>
+                <button class="itemButton" onclick="buyKareszGenerator(1)">
+                    Buy 1
+                </button>
+                <div id="kareszGeneratorPriceText">Price: 0 Karesz</div>
+            </div>
+        </div>
+        <div id="kareszContainer">
+            <h1 id="kareszCountText">Karesz count:</h1>
+            <h2 id="kareszPerSecText">0 Karesz/sec</h2>
+            <img
+                src="../karesz/images/karesz.png"
+                id="kareszImage"
+                onclick="kareszClicked()"
+            />
+            <br />
+            <button id="saveButton" onclick="saveGame()">Save</button>
+            <button id="loadButton" onclick="loadGame(true)">Load</button>
+            <button id="resetButton" onclick="resetGame()">Reset</button>
+        </div>
+    </body>
 </html>
