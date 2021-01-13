@@ -20,14 +20,14 @@ body {
     color: white;
 }
 
-#input {
+/* #input {
     height: 169px;
-    width: 250px;
+    width: 100px;
 }
 #output {
     height: 300px;
     width: 690px;
-}
+} */
 
 .center {
     margin: 0;
