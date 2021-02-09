@@ -4,14 +4,30 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
+    color: black;
     background-color: white;
+    font-family: "Roboto", sans-serif;
 }
 
-h1 {
+.center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+}
 
-    font-family: "Roboto", sans-serif;
+#stats {
+    position: absolute;
+    padding: 6.9px;
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%);
+    text-align: right;
+}
+#stats:visited {
+    color: black;
+}
+#stats:hover {
+    color: red;
 }
