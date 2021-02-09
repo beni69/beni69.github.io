@@ -4,7 +4,6 @@ body {
     font-family: "Roboto", "sans-serif";
     font-size: 16px;
     font-weight: normal;
-    /* just using font property can do the same */
     line-height: 1.6em;
     margin: 0;
 }
@@ -13,7 +12,7 @@ body {
     text-align: center;
 }
 .container h1 {
-    font-size: 420%;
+    font-size: 64px;
 }
 .container textarea {
     background-color: #0d0d0d;
