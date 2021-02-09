@@ -29,7 +29,3 @@ function submit() {
         }
     );
 }
-
-function bruh() {
-    alert("BRUUUUUH");
-}
