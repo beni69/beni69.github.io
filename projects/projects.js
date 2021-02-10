@@ -1,3 +1,3 @@
-function redir(t) {
-    window.location.href = `/${t}`;
+function redir(t, full = false) {
+    window.location.href = full ? t : `/${t}`;
 }
