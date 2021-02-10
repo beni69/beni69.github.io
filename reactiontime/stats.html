@@ -6,19 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <script src="stats.js"></script>
     <title>Reaction Time Stats</title>
 </head>
 
-<body>
+<body onload="LoadLocal();LoadGlobal()">
+    <a id="stats" href="index.html" onclick="playing=true">Click to go back</a>
     <div class="center">
-        <h1>Average reaction time:</h1>
-        <h2 id="average"></h2>
-        <h1>Best reaction time:</h1>
-        <h2 id="min"></h2>
+        <h1>Global Stats</h1>
+        <h2>Average reaction time:</h2>
+        <h3 id="avgG"></h3>
+        <h2>Best reaction time:</h2>
+        <h3 id="minG"></h3>
+        <h1>Local Stats</h1>
+        <h2>Average reaction time:</h2>
+        <h3 id="avgL"></h3>
+        <h2>Best reaction time:</h2>
+        <h3 id="minL"></h3>
+        <a href="#" onclick="ResetLocal()">Reset local stats</a>
     </div>
 </body>
 
