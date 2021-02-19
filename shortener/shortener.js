@@ -26,15 +26,15 @@ document.addEventListener("DOMContentLoaded", event => {
             `.trim();
         } else {
             // create a link
-            // const res = await fetch("http://api.karesz.xyz/shortener", {
-            //     method: "POST",
-            //     headers: { "Content-type": "application/json" },
-            //     body: JSON.stringify({ dest: input }),
-            // });
-            // const body = await res.json();
-            // const url = body.created.url;
-            // a.innerText = url;
-            // a.href = url;
+            const res = await fetch("http://api.karesz.xyz/shortener", {
+                method: "POST",
+                headers: { "Content-type": "application/json" },
+                body: JSON.stringify({ dest: input }),
+            });
+            const body = await res.json();
+            const url = body.created.url;
+            a.innerText = url;
+            a.href = url;
         }
     });
 });
