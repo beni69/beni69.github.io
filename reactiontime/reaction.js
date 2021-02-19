@@ -35,12 +35,12 @@ const game = () => {
 
     async function sendToDb(time) {
         // global stats
-        fetch("http://api.karesz.xyz/karesz/reaction", {
+        fetch("https://api.karesz.xyz/karesz/reaction", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({time: time}),
+            body: JSON.stringify({ time: time }),
         })
             .then(response => response.json())
             .then(data => console.log(data))

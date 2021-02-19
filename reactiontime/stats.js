@@ -1,6 +1,6 @@
 // global stats
 function LoadGlobal() {
-    fetch("http://api.karesz.xyz/karesz/reaction", {method: "GET"})
+    fetch("https://api.karesz.xyz/karesz/reaction")
         .then(response => response.json())
         .then(data => {
             document.getElementById("avgG").innerHTML =
