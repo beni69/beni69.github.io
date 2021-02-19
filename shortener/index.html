@@ -14,12 +14,14 @@
 </head>
 
 <body>
-    <div class="center">
+    <form class="center" id="form">
         <h1>Create a new url:</h1>
-        <input type="text" id="dest">
-        <button type="submit" onclick="submit()">Create</button>
-        <p><a href="#" target="_blank" id="res"></a></p>
-    </div>
+        <h4><i>Or enter an existing krsz.me url to get details on it</i></h4>
+        <input type="text" id="dest" title="Enter the url you want to shorten here">
+        <input type="submit" title="Click to shorten the entered url" value="Create">
+        <p id="p"></p>
+        <a href="#" target="_blank" id="a"></a>
+    </form>
 </body>
 
 </html>
