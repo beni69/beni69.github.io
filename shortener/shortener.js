@@ -2,20 +2,33 @@ document.addEventListener("DOMContentLoaded", event => {
     document.getElementById("form").addEventListener("submit", async e => {
         e.preventDefault();
 
-        const url = "https://api.karesz.xyz";
-
-        const input = document.getElementById("dest").value;
+        const dest = document.getElementById("dest").value;
+        const key = document.getElementById("key").value;
+        const code = document.getElementById("code").value;
         const p = document.getElementById("p");
         const a = document.getElementById("a");
 
-        p.innerText = "";
+        if (!dest) return;
+
+        let waiting = true;
+        setTimeout(() => {
+            const span = document.getElementById("toolong");
+            if (waiting)
+                span.innerHTML =
+                    'Taking too long? The server may be down. Check out the status <a href="https://status.karesz.xyz" target="_blank">here</a>.';
+        }, 8000);
+
+        p.innerHTML =
+            '<span id="loading">Loading.</span><br><span id="toolong"></span>';
         a.innerText = "";
+        loading();
 
         const r = /^http(s|):\/\/krsz\.me($|\/.+$)/i;
+        const url = "https://api.karesz.xyz";
 
-        if (r.test(input)) {
+        if (r.test(dest)) {
             // get stats of a link
-            const res = await fetch(`${url}/shortener?code=${input}`);
+            const res = await fetch(`${url}/shortener?code=${dest}`);
             if (!res.status.toString().startsWith("2")) {
                 console.error(res);
                 if (res.status == 404)
@@ -25,6 +38,7 @@ document.addEventListener("DOMContentLoaded", event => {
                         "The server encountered an error. Please try again later. 😫";
                 return;
             }
+            waiting = false;
             const d = await res.json();
             console.log(d);
             p.innerText = `
@@ -35,10 +49,12 @@ document.addEventListener("DOMContentLoaded", event => {
             `.trim();
         } else {
             // create a link
+            let b = { dest, key, code };
+
             const res = await fetch(`${url}/shortener`, {
                 method: "POST",
                 headers: { "Content-type": "application/json" },
-                body: JSON.stringify({ dest: input }),
+                body: JSON.stringify(b),
             });
             if (!res.status.toString().startsWith("2")) {
                 console.error(res);
@@ -46,10 +62,25 @@ document.addEventListener("DOMContentLoaded", event => {
                     "The server encountered an error. Please try again later. 😫";
                 return;
             }
+            waiting = false;
             const d = await res.json();
-            const url = d.created.url;
-            a.innerText = url;
-            a.href = url;
+            const newUrl = d.created.url;
+            a.innerText = newUrl;
+            a.href = newUrl;
+            p.innerText = `Your key is ${d.created.key}. You might need this later so try to remember it.`;
+        }
+
+        async function loading() {
+            const span = document.getElementById("loading");
+            while (waiting) {
+                if (span.innerText == "Loading.") span.innerText = "Loading..";
+                else if (span.innerText == "Loading..")
+                    span.innerText = "Loading...";
+                else if (span.innerText == "Loading...")
+                    span.innerText = "Loading.";
+                // setTimeout(loading(), 5000);
+                await new Promise(r => setTimeout(r, 1000));
+            }
         }
     });
 });
