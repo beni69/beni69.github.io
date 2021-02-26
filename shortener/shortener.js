@@ -56,7 +56,10 @@ document.addEventListener("DOMContentLoaded", event => {
                 headers: { "Content-type": "application/json" },
                 body: JSON.stringify(b),
             });
-            if (!res.status.toString().startsWith("2")) {
+            if (res.status == 409) {
+                console.error(res);
+                p.innerText = "That code is already taken.";
+            } else if (!res.status.toString().startsWith("2")) {
                 console.error(res);
                 p.innerText =
                     "The server encountered an error. Please try again later. 😫";
