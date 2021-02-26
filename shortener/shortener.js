@@ -1,3 +1,8 @@
+function qr(text) {
+    QRCode.toCanvas(document.getElementById("canvas"), text, error => {
+        if (error) console.error(error);
+    });
+}
 document.addEventListener("DOMContentLoaded", event => {
     document.getElementById("form").addEventListener("submit", async e => {
         e.preventDefault();
@@ -70,7 +75,8 @@ document.addEventListener("DOMContentLoaded", event => {
             const newUrl = d.created.url;
             a.innerText = newUrl;
             a.href = newUrl;
-            p.innerText = `Your key is ${d.created.key}. You might need this later so try to remember it.`;
+            p.innerHTML = `Your key is ${d.created.key}. You might need this later so try to remember it.<br><br>
+            <button class="f" onClick="qr('${newUrl}')">Show QR code</button>`;
         }
 
         async function loading() {

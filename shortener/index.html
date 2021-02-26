@@ -7,6 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
     <script src="shortener.js"></script>
@@ -21,8 +22,9 @@
         <input type="text" id="key" placeholder="KEY (Optional)" autocomplete="current-password"><br>
         <input type="text" id="code" placeholder="Custom code (Optional)" autocomplete="off"><br>
         <input type="submit" id="btn" title="Click to go" value="Go!"><br>
-        <p id="p"></p>
         <a href="#" target="_blank" id="a"></a>
+        <p id="p"></p>
+        <canvas id="canvas"></canvas>
     </form>
 </body>
 
